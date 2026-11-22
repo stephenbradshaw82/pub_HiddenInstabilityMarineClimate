@@ -1,0 +1,51 @@
+# Ignore everything by default.
+*
+
+# Reader documentation, scripts and shared code.
+!/.gitignore
+!/README.md
+!/DATA-LICENSES.md
+!/scripts/
+!/scripts/0[0-7]_*.R
+!/support/
+!/support/*.R
+
+# Data 
+!/data/
+/data/*
+!/data/prepared/
+!/data/prepared/gascoyne_ssp245_wa_bran_noaa.zip
+!/data/prepared/gascoyne_ssp245_wa_cmip6.zip
+
+# Bundled study methods.
+!/method/
+!/method/00_src/
+!/method/00_src/functions.R
+!/method/00_src/revision_config.R
+!/method/00_src/revision_velocity_functions.R
+!/method/00_src/revision_final_figure_functions.R
+!/method/01_scripts/
+!/method/01_scripts/610_functions_3D_fast.R
+
+# Script 01 creates the inputs locally. Later stages create the results.
+/runs/
+/outputs/
+*.nc
+
+# Published reference outputs
+!/outputs/
+!/outputs/*.png
+!/outputs/*.csv
+
+# Reproducible R environment
+!/.Rprofile
+!/renv.lock
+!/renv/
+!/renv/activate.R
+!/renv/settings.json
+!/renv/.gitignore
+
+# Never commit the local R package library or cache.
+/renv/library/
+/renv/cache/
+/renv/staging/
